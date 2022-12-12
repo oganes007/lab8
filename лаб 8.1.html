@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div class="field">
+<form name="form1">
+Введите 6 -ое  число: <input type="text" id="chisel" name="res"><br>
+<input type="button" value="reverse" onClick="check(form1)" class="my_button"><br>
+<div id="s"></div><br>
+</div>
+</form>
+<script>
+function check(obj)
+{ 
+let m = document.getElementById('chisel').value;
+let n1 = Math.floor(m/100000)
+let n2 = Math.floor(m / 10000) % 10 
+let n3 = Math.floor(m/1000 % 100)%10
+let n4 = Math.floor(m%1000/100) 
+let n5 = Math.floor(m%100/10)
+let n6 = m%10
+let otvet = n6*100000+n5*10000+n4*1000+n3*100+n2*10+n1;
+document.getElementById('s').innerHTML="Ваше число: " + otvet;
+}
+</script>
+</body> 
+</html>
+
+

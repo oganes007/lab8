@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p, body {
+	text-align: center;
+}
+
+</style>
+</head>
+<body>
+<p>Лотерея</p>
+<form name = "form1">
+   <div class="field">
+    <input type="text" id="rand" name="res"><br>
+    <input type="button" value="ИГРАТЬ" onClick="jem1(form1)" class="my_button"><br>
+    <div id="s"></div><br>
+    <a href="лаб 8.1.html">Next</a>
+<script>
+	function jem1(obj)
+{ 
+document.getElementsByName("res").value;
+obj.res.value=Math.floor(Math.random() * 999999)+ 1;
+let m = obj.res.value;
+let s = Math.floor(m/1000);
+let d = m%1000
+if (Math.floor(m/100000) + (Math.floor(m / 10000) % 10) + ((Math.floor(m/1000))%100%10) == Math.floor((m%1000)/100) + Math.floor((m%100)/10) + m%10){
+let val31 = document.getElementById('rand').checked;
+document.getElementById('s').innerHTML="ВЫ ПОБЕДИЛИ"}
+   else {
+   let val31 = document.getElementById('rand').checked;
+   document.getElementById('s').innerHTML="УВЫ, ВЫ ПРОИГРАЛИ"}
+}
+</script>
+</body>
+</html>
